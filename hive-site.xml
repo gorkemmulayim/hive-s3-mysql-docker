@@ -11,16 +11,4 @@
     <value>com.mysql.cj.jdbc.Driver</value>
     <description>Driver class name for a JDBC metastore</description>
   </property>
-  <property>
-    <name>fs.s3a.access.key</name>
-    <value>${AWS_ACCESS_KEY_ID}</value>
-    <description>AWS access key ID.
-   Omit for IAM role-based or provider-based authentication.</description>
-  </property>
-  <property>
-    <name>fs.s3a.secret.key</name>
-    <value>${AWS_SECRET_ACCESS_KEY}</value>
-    <description>AWS secret key.
-   Omit for IAM role-based or provider-based authentication.</description>
-  </property>
 </configuration>
