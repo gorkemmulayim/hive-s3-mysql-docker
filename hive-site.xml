@@ -11,4 +11,12 @@
     <value>com.mysql.cj.jdbc.Driver</value>
     <description>Driver class name for a JDBC metastore</description>
   </property>
+  <property>
+    <name>hive.log.explain.output</name>
+    <value>true</value>
+    <description>
+      Whether to log explain output for every query.
+      When enabled, will log EXPLAIN EXTENDED output for the query at INFO log4j log level.
+    </description>
+  </property>
 </configuration>
