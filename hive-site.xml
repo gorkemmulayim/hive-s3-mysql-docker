@@ -12,6 +12,48 @@
     <description>Driver class name for a JDBC metastore</description>
   </property>
   <property>
+    <name>hive.server2.webui.max.historic.queries</name>
+    <value>100</value>
+    <description>The maximum number of past queries to show in HiverSever2 WebUI.</description>
+  </property>
+  <property>
+    <name>hive.security.authorization.enabled</name>
+    <value>true</value>
+    <description>enable or disable the Hive client authorization</description>
+  </property>
+  <property>
+    <name>hive.security.authorization.manager</name>
+    <value>org.apache.hadoop.hive.ql.security.authorization.plugin.sqlstd.SQLStdConfOnlyAuthorizerFactory</value>
+    <description>
+      The Hive client authorization manager class name. The user defined authorization class should implement
+      interface org.apache.hadoop.hive.ql.security.authorization.HiveAuthorizationProvider.
+    </description>
+  </property>
+  <property>
+    <name>hive.security.authenticator.manager</name>
+    <value>org.apache.hadoop.hive.ql.security.SessionStateUserAuthenticator</value>
+    <description>
+      hive client authenticator manager class name. The user defined authenticator should implement
+      interface org.apache.hadoop.hive.ql.security.HiveAuthenticationProvider.
+    </description>
+  </property>
+  <property>
+    <name>hive.server2.enable.doAs</name>
+    <value>false</value>
+    <description>
+      Setting this property to true will have HiveServer2 execute
+      Hive operations as the user making the calls to it.
+    </description>
+  </property>
+  <property>
+    <name>hive.users.in.admin.role</name>
+    <value>anonymous</value>
+    <description>
+      Comma separated list of users who are in admin role for bootstrapping.
+      More users can be added in ADMIN role later.
+    </description>
+  </property>
+  <property>
     <name>hive.log.explain.output</name>
     <value>true</value>
     <description>
