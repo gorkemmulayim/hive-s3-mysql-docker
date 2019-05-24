@@ -1,7 +1,6 @@
 FROM ubuntu
 
-RUN apt-get update
-RUN apt-get install -y wget openjdk-8-jre
+RUN apt-get update && apt-get install -y wget openjdk-8-jre
 
 ARG HADOOP_VERSION=3.2.0
 ARG HIVE_VERSION=3.1.1
