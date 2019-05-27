@@ -33,8 +33,7 @@ RUN mv aws-java-sdk-kms-${AWS_SDK_VERSION}.jar /hive/lib
 RUN wget http://central.maven.org/maven2/com/amazonaws/aws-java-sdk-dynamodb/1.11.520/aws-java-sdk-dynamodb-${AWS_SDK_VERSION}.jar
 RUN mv aws-java-sdk-dynamodb-${AWS_SDK_VERSION}.jar /hive/lib
 
-COPY hive-site.xml /hive/conf
-COPY hive-log4j2.properties /hive/conf
+COPY conf /hive/conf
 
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 ENV HADOOP_HOME=/hadoop
@@ -43,6 +42,7 @@ ENV PATH=$PATH:$HADOOP_HOME/bin
 ENV PATH=$PATH:$HIVE_HOME/bin
 ENV HIVE_CONF_DIR=/hive/conf
 
+VOLUME /hive/conf
 VOLUME /hive/logs
 EXPOSE 9083
 EXPOSE 10000
